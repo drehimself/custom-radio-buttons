@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="min-h-screen bg-grey-light font-sans">
+    <div class="md:w-custom mx-auto pt-8 pb-6 md:flex md:justify-between items-end border-b-2 border-grey">
+      <div class="text-2xl text-blue-darker mb-4 md:mb-0">Change Plan</div>
+      <div>
+        <a href="#" class="no-underline text-blue-darker hover:underline">Cancel your plan</a>
+      </div>
+    </div>
+    <selectable-plan></selectable-plan>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SelectablePlan from './components/SelectablePlan.vue'
+import './assets/css/main.css'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    SelectablePlan
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

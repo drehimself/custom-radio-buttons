@@ -6,7 +6,39 @@
         <a href="#" class="no-underline text-blue-darker hover:underline">Cancel your plan</a>
       </div>
     </div>
-    <selectable-plan></selectable-plan>
+    <div class="md:w-custom mx-auto py-8 md:flex md:justify-between md:flex-wrap">
+      <selectable-plan
+        plan-name="Hobby"
+        plan-gigs="1"
+        plan-dollars="5"
+        v-model="activePlan"
+      ></selectable-plan>
+      <selectable-plan
+        plan-name="Growth"
+        plan-gigs="5"
+        plan-dollars="10"
+        v-model="activePlan"
+      ></selectable-plan>
+      <selectable-plan
+        plan-name="Business"
+        plan-gigs="10"
+        plan-dollars="15"
+        v-model="activePlan"
+      ></selectable-plan>
+      <selectable-plan
+        plan-name="Enterprise"
+        plan-gigs="20"
+        plan-dollars="20"
+        v-model="activePlan"
+      ></selectable-plan>
+    </div>
+    <!-- <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <br>
+    <span>Picked: {{ picked }}</span> -->
   </div>
 </template>
 
@@ -18,6 +50,12 @@ export default {
   name: 'app',
   components: {
     SelectablePlan
+  },
+  data() {
+    return {
+      picked: 'Two',
+      activePlan: '',
+    }
   }
 }
 </script>

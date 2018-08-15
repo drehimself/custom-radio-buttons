@@ -1,5 +1,5 @@
 <template>
-    <div class="w-48 bg-white rounded-lg shadow-md p-6 hover:cursor-pointer mb-8 hover:bg-green-lightest focus:outline-none focus:shadow-outline-green" :class="{'bg-green-lightest shadow-outline-green' : this.activePlan === this.planName}" tabindex="0" @click="updateActivePlan" @keydown.space="updateActivePlan">
+    <div class="w-48 bg-white rounded-lg shadow-md p-6 cursor-pointer mb-8 hover:bg-green-lightest focus:outline-none focus:shadow-outline-green" :class="{'bg-green-lightest shadow-outline-green' : this.activePlan === this.planName}" tabindex="0" @click="updateActivePlan" @keydown.space="updateActivePlan">
       <div class="flex justify-between items-center mb-3">
         <h1 class="uppercase text-base tracking-wide text-blue-darker my-2">{{ this.planName }}</h1>
         <div v-if="this.activePlan === this.planName">
